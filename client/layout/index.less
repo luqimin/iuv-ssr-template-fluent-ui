@@ -1,0 +1,149 @@
+@header-text-color: #c7c9cf;
+
+.header {
+    display: flex;
+    position: relative;
+    padding: 0;
+    width: 100%;
+    color: @header-text-color;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+}
+
+.wrap {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    max-width: @page-width;
+    height: @layout-header-height;
+    justify-content: space-between;
+}
+
+.content {
+    margin: 33px 0;
+    width: 100%;
+}
+
+.contentWrap {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    max-width: @page-width;
+    flex-direction: column;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    align-items: center;
+}
+
+.nav {
+    :global {
+        .ms-Nav-groupContent {
+            margin-bottom: 0;
+        }
+
+        .ms-Nav-navItems {
+            display: flex;
+        }
+
+        .ms-Nav-navItem {
+            margin-right: 6px;
+        }
+
+        .ms-Nav-link {
+            padding: 0 20px;
+
+            &::after {
+                border-bottom: 2px solid rgb(0, 120, 212);
+                border-left: 0;
+            }
+        }
+    }
+}
+
+.login {
+    float: right;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    .btn {
+        float: right;
+
+        a {
+            font-size: 12px;
+            color: #a8a8a8;
+
+            &:hover {
+                color: #ff6d10;
+            }
+        }
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 16px;
+    color: #fff;
+
+    &:focus {
+        text-decoration: none;
+    }
+
+    &:hover {
+        color: #fff;
+    }
+
+    .img {
+        display: inline-block;
+        margin-right: 7px;
+        width: 31px;
+        height: 31px;
+        background-image: url('../assets/logo.png');
+        background-image: image-set(url('../assets/logo.png') 1x, url('../assets/logo@2x.png') 2x, url('../assets/logo@3x.png') 3x);
+        background-size: cover;
+    }
+}
+
+.avatar {
+    color: #fff;
+}
+
+.breadcrumb {
+    a {
+        text-decoration: none;
+    }
+}
+
+.main {
+    display: flex;
+    margin: 0;
+}
+
+.footer {
+    display: flex;
+    margin-top: 60px;
+    width: 100%;
+    font-size: 12px;
+    color: #b9b9b9;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+
+    &.fixBottom {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto 50px;
+    }
+}

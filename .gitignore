@@ -1,0 +1,16 @@
+.*.swp
+._*
+.DS_Store
+.git
+
+npm-debug.log
+node_modules
+package-lock.json
+
+build
+logs
+run
+public
+
+!client/
+!server/
